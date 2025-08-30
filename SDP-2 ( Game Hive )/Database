@@ -1,0 +1,46 @@
+-- Create the central players table
+CREATE TABLE players (
+    player_uid VARCHAR(20) PRIMARY KEY,
+    player_name VARCHAR(100) NOT NULL
+);
+
+-- Create hangman_leaderboard
+CREATE TABLE hangman_leaderboard (
+    player_id VARCHAR(20),
+    score INT,
+    FOREIGN KEY (player_id) REFERENCES players(player_uid)
+);
+
+-- Create tictactoe_leaderboard
+CREATE TABLE tictactoe_leaderboard (
+    player_id VARCHAR(20),
+    wins INT,
+    losses INT,
+    ties INT,
+    FOREIGN KEY (player_id) REFERENCES players(player_uid)
+);
+
+-- Create brickbuster_leaderboard
+CREATE TABLE brickbuster_leaderboard (
+    player_id VARCHAR(20),
+    total_score INT,
+    highest_level INT,
+    difficulty VARCHAR(10),
+    last_played DATETIME,
+    FOREIGN KEY (player_id) REFERENCES players(player_uid)
+);
+
+-- Create maze_leaderboard
+CREATE TABLE maze_leaderboard (
+    player_id VARCHAR(20),
+    points INT,
+    FOREIGN KEY (player_id) REFERENCES players(player_uid)
+);
+
+-- Create trapper_leaderboard
+CREATE TABLE trapper_leaderboard (
+    player_id VARCHAR(20),
+    time_survived INT,
+    walls_placed INT,
+    FOREIGN KEY (player_id) REFERENCES players(player_uid)
+);
