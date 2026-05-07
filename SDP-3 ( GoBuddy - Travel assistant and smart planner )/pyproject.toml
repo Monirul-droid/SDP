@@ -1,5 +1,0 @@
-[tool.pyright]
-pythonVersion = "3.13"
-pythonPath = "C:/Program Files/Python313/python.exe"
-include = ["gobuddy_backend"]
-exclude = ["**/node_modules", "**/__pycache__", "build", "dist"]
