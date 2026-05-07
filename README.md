@@ -1,2 +1,2 @@
 # SDP
-Software Development Project
+This repository contains different Software Development Project
